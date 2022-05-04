@@ -8,6 +8,7 @@ Created on Tue May  3 21:48:38 2022
 Solution to N-queens problem using Min-Conflicts CSP algorithm
 """
 
+import argparse
 import numpy as np
 import random
 import sys
@@ -135,7 +136,20 @@ def min_conflicts(size, num_steps=100000):
 
 
 def __main__():
-    nqueen = 50
+    parser = argparse.ArgumentParser()
+    
+    parser.add_argument('--nqueen', type=int,
+        help="Number of queens to place on board",
+        required=False)
+    
+    # Parse the argument
+    args = parser.parse_args()
+
+    if args.nqueen:
+        nqueen = args.nqueen
+    else:
+        nqueen = 8
+
     success, board, queen_locs, steps = min_conflicts(nqueen)
     
     if success:
