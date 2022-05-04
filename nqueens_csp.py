@@ -82,7 +82,8 @@ def calc_num_conflicts(pos, board):
 
 def min_conflicts(size, num_steps=100000):
     board, qlocs = initialize_board(size)
-    
+    print("Initial Board:")
+    display_board(board)
     for step in range(num_steps):
         conflicts = []
         
@@ -159,9 +160,21 @@ def __main__():
         print(sorted(queen_locs))
         
         print("\nSolution:")
-        print(board)
+        display_board(board)
     else:
         print("No solution found!")
 
-__main__()
+def display_board(board_solution):
+    for i, row in enumerate(board_solution):
+        output = "["
+        for val in row:
+            if val:
+                output += " Q"
+            else:
+                output += " _"
+        output += " ]"
+        print(output)
+
+if __name__ == "__main__":
+    __main__()
 
