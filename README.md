@@ -1,4 +1,4 @@
-# COS572-NQueens
+# N-Queens
 
 ## Overview: N-Queen Problem
 The N-Queen problem attempts to placing N chess queens on an N×N chessboard so that no two queens threaten each other. A solution thus requires no two queens share the same column, row, or diagonal.
@@ -151,6 +151,25 @@ Solution:
 [ _ _ _ _ _ _ _ _ _ _ _ _ _ Q ]
 [ _ _ _ _ _ _ _ Q _ _ _ _ _ _ ]
 ```
+
+## Analysis
+The time it take for the min-conflicts algorithm is independent of the problem size. Due to the randomized nature of the algorithm the number of steps it takes to solve the N-Queens problem varies. To get an idea of the average number of steps a bootstrap simulation (b=10000) was run for board size of 4 to 15. The results are shown below
+
+| N-Queen | Avg. No. Steps |
+|---------|----------------|
+| 4       |         19.2323|
+| 5       |         12.9195|
+| 6       |         75.6337|
+| 7       |         40.5277|
+| 8       |         59.4971|
+| 9       |         67.2556|
+| 10      |         120.4678|
+| 11      |         137.0962|
+| 12      |         133.4388|
+| 13      |         134.8904|
+| 14      |         146.123 |
+| 15      |         144.5652|
+
 ## Running the Code
 
 When running the code the default is to run the 8-Queens problem. This can be run using the following command:
