@@ -21,8 +21,136 @@ In the N-Queens problem:
 
 To solve the CSP problem the min-conflicts algorithm can be used. The algorithm starts with a possible solution to the N-Queens problem. If all the constraints are satisfied then the current representation of the CSP is the final solution. If not, then we loop for a max number of steps in an attempt to resolve the conflicts. We do this by randomly choosing a variable that has conflicts. We find a new position that has the minimum number of conflicts and move the queen to that spot, and repeat until a solution is found or we have iterated the max number of steps. 
 
+## Example Output: 8-Queens
 
+```
+Initial Board:
+[ _ Q _ _ _ _ _ _ ]
+[ _ _ _ _ Q _ _ _ ]
+[ _ Q _ _ _ _ _ _ ]
+[ _ _ _ _ _ Q _ _ ]
+[ _ _ _ _ _ Q _ _ ]
+[ _ _ _ Q _ _ _ _ ]
+[ _ Q _ _ _ _ _ _ ]
+[ _ Q _ _ _ _ _ _ ]
+Successfully found solution using Min-Conflict in 25 steps.
 
+Queens are located at:
+[(0, 2), (1, 4), (2, 7), (3, 3), (4, 0), (5, 6), (6, 1), (7, 5)]
+
+Solution:
+[ _ _ Q _ _ _ _ _ ]
+[ _ _ _ _ Q _ _ _ ]
+[ _ _ _ _ _ _ _ Q ]
+[ _ _ _ Q _ _ _ _ ]
+[ Q _ _ _ _ _ _ _ ]
+[ _ _ _ _ _ _ Q _ ]
+[ _ Q _ _ _ _ _ _ ]
+[ _ _ _ _ _ Q _ _ ]
+```
+
+```
+Initial Board:
+[ _ _ Q _ _ _ _ _ ]
+[ Q _ _ _ _ _ _ _ ]
+[ _ _ _ _ _ Q _ _ ]
+[ _ _ _ _ _ _ Q _ ]
+[ _ _ _ _ _ _ _ Q ]
+[ _ _ Q _ _ _ _ _ ]
+[ _ _ _ _ _ _ Q _ ]
+[ _ _ _ _ _ _ _ Q ]
+Successfully found solution using Min-Conflict in 49 steps.
+
+Queens are located at:
+[(0, 2), (1, 5), (2, 3), (3, 0), (4, 7), (5, 4), (6, 6), (7, 1)]
+
+Solution:
+[ _ _ Q _ _ _ _ _ ]
+[ _ _ _ _ _ Q _ _ ]
+[ _ _ _ Q _ _ _ _ ]
+[ Q _ _ _ _ _ _ _ ]
+[ _ _ _ _ _ _ _ Q ]
+[ _ _ _ _ Q _ _ _ ]
+[ _ _ _ _ _ _ Q _ ]
+[ _ Q _ _ _ _ _ _ ]
+```
+
+## Example: 14-Queens
+```
+Initial Board:
+[ _ _ _ _ _ _ _ _ _ _ _ Q _ _ ]
+[ _ _ _ _ _ Q _ _ _ _ _ _ _ _ ]
+[ Q _ _ _ _ _ _ _ _ _ _ _ _ _ ]
+[ _ _ _ _ Q _ _ _ _ _ _ _ _ _ ]
+[ _ _ Q _ _ _ _ _ _ _ _ _ _ _ ]
+[ _ _ _ Q _ _ _ _ _ _ _ _ _ _ ]
+[ _ _ _ _ _ _ _ _ _ _ _ Q _ _ ]
+[ _ _ _ _ _ _ _ _ Q _ _ _ _ _ ]
+[ _ _ _ _ Q _ _ _ _ _ _ _ _ _ ]
+[ _ _ Q _ _ _ _ _ _ _ _ _ _ _ ]
+[ _ _ _ _ _ _ _ _ Q _ _ _ _ _ ]
+[ _ _ _ _ _ _ _ _ _ _ _ _ _ Q ]
+[ _ _ _ _ _ _ _ Q _ _ _ _ _ _ ]
+[ _ _ _ _ Q _ _ _ _ _ _ _ _ _ ]
+Successfully found solution using Min-Conflict in 170 steps.
+
+Queens are located at:
+[(0, 2), (1, 8), (2, 5), (3, 9), (4, 0), (5, 13), (6, 4), (7, 7), (8, 12), (9, 10), (10, 1), (11, 6), (12, 11), (13, 3)]
+
+Solution:
+[ _ _ Q _ _ _ _ _ _ _ _ _ _ _ ]
+[ _ _ _ _ _ _ _ _ Q _ _ _ _ _ ]
+[ _ _ _ _ _ Q _ _ _ _ _ _ _ _ ]
+[ _ _ _ _ _ _ _ _ _ Q _ _ _ _ ]
+[ Q _ _ _ _ _ _ _ _ _ _ _ _ _ ]
+[ _ _ _ _ _ _ _ _ _ _ _ _ _ Q ]
+[ _ _ _ _ Q _ _ _ _ _ _ _ _ _ ]
+[ _ _ _ _ _ _ _ Q _ _ _ _ _ _ ]
+[ _ _ _ _ _ _ _ _ _ _ _ _ Q _ ]
+[ _ _ _ _ _ _ _ _ _ _ Q _ _ _ ]
+[ _ Q _ _ _ _ _ _ _ _ _ _ _ _ ]
+[ _ _ _ _ _ _ Q _ _ _ _ _ _ _ ]
+[ _ _ _ _ _ _ _ _ _ _ _ Q _ _ ]
+[ _ _ _ Q _ _ _ _ _ _ _ _ _ _ ]
+```
+
+```
+Initial Board:
+[ _ _ _ _ _ _ _ _ _ _ Q _ _ _ ]
+[ _ _ _ _ _ _ _ _ _ _ _ _ _ Q ]
+[ _ _ _ _ _ _ _ Q _ _ _ _ _ _ ]
+[ _ _ _ _ _ Q _ _ _ _ _ _ _ _ ]
+[ Q _ _ _ _ _ _ _ _ _ _ _ _ _ ]
+[ _ _ _ _ _ _ _ _ _ Q _ _ _ _ ]
+[ _ _ _ _ _ _ _ _ Q _ _ _ _ _ ]
+[ Q _ _ _ _ _ _ _ _ _ _ _ _ _ ]
+[ _ _ _ _ _ _ _ _ _ _ _ Q _ _ ]
+[ _ _ Q _ _ _ _ _ _ _ _ _ _ _ ]
+[ _ _ _ _ _ _ _ _ _ _ _ _ _ Q ]
+[ _ _ _ _ _ _ _ _ _ _ _ Q _ _ ]
+[ _ _ _ _ _ _ Q _ _ _ _ _ _ _ ]
+[ _ _ _ _ _ _ _ Q _ _ _ _ _ _ ]
+Successfully found solution using Min-Conflict in 105 steps.
+
+Queens are located at:
+[(0, 6), (1, 3), (2, 10), (3, 12), (4, 4), (5, 9), (6, 11), (7, 2), (8, 5), (9, 1), (10, 8), (11, 0), (12, 13), (13, 7)]
+
+Solution:
+[ _ _ _ _ _ _ Q _ _ _ _ _ _ _ ]
+[ _ _ _ Q _ _ _ _ _ _ _ _ _ _ ]
+[ _ _ _ _ _ _ _ _ _ _ Q _ _ _ ]
+[ _ _ _ _ _ _ _ _ _ _ _ _ Q _ ]
+[ _ _ _ _ Q _ _ _ _ _ _ _ _ _ ]
+[ _ _ _ _ _ _ _ _ _ Q _ _ _ _ ]
+[ _ _ _ _ _ _ _ _ _ _ _ Q _ _ ]
+[ _ _ Q _ _ _ _ _ _ _ _ _ _ _ ]
+[ _ _ _ _ _ Q _ _ _ _ _ _ _ _ ]
+[ _ Q _ _ _ _ _ _ _ _ _ _ _ _ ]
+[ _ _ _ _ _ _ _ _ Q _ _ _ _ _ ]
+[ Q _ _ _ _ _ _ _ _ _ _ _ _ _ ]
+[ _ _ _ _ _ _ _ _ _ _ _ _ _ Q ]
+[ _ _ _ _ _ _ _ Q _ _ _ _ _ _ ]
+```
 ## Running the Code
 
 When running the code the default is to run the 8-Queens problem. This can be run using the following command:
