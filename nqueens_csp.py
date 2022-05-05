@@ -205,7 +205,7 @@ def display_board(board_solution):
         output = "["
         
         # Loop through rows
-        for val in columns:
+        for val in row:
             if val:
                 output += " Q"
             else:
